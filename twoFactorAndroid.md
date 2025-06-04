@@ -11,12 +11,14 @@ Goal: Reverse engineer the OTP mechanism to login as admin and retrieve the flag
 ```unzip twoFactorAndroid.apk -d challenge_apk```
 
  ![[Pasted image 20250228044648.png]]
- then i installed  jadx  and set it up took alot of time since i cloned it from github and also had to compile it , afterwards i use jadx to open and decompile the files there
+ then i installed  [jadx](https://github.com/skylot/jadx)  and set it up took alot of time since i cloned it from github and also had to compile it , Then I used JADX to decompile the APK and view the Java code:
  ```
  build/jadx/bin/jadx-gui ~/Downloads/challenge_apk
 
 ```
-after looking around using the search bar `ctrl+shift+f` to look for hash alogrithms  and encryption types ,  i check the dex file 'classes.dex ' found `MainActivity` tried to  readthe java code as much as i can.
+after looking around using the search bar `ctrl+shift+f` to look for hash alogrithms  and encryption types ,  i check the dex file 'classes.dex ' found `MainActivity` tried to  read the java code as much as i can.
+ # Understanding the Logic :
+
 the scripts/code uses username and time in millisecond to generate otp code
  - This method takes a string (`name`) as input and performs the following steps:
     1. Converts the string to a character array.
@@ -89,4 +91,4 @@ if __name__ == "__main__":
 got the code now let's try it out
 it worked and i got the flag
 ![[Pasted image 20250228053039.png]]
-the code last for 5 seconds
+the otp code last for 5 seconds
