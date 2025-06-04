@@ -1,9 +1,15 @@
+📌 Challenge Info
+Platform: MetaCTF ( https://metaproblems.com/6c6bfeb7a0fc508a452254d65e4c298b/ )   -- site
+
+Challenge: 2FA Android APK (https://metaproblems.com/d84d16e70b19a2069e1e6b06c615e1cc/twoFactorAndroid.apk) --apk file 
+
+Goal: Reverse engineer the OTP mechanism to login as admin and retrieve the flag.
+
 ![[Pasted image 20250228044006.png]]
 
-https://metaproblems.com/6c6bfeb7a0fc508a452254d65e4c298b/   -- site
-[https://metaproblems.com/d84d16e70b19a2069e1e6b06c615e1cc/twoFactorAndroid.apk](https://metaproblems.com/d84d16e70b19a2069e1e6b06c615e1cc/twoFactorAndroid.apk) --apk file 
- to login you need admin otp code  an apk file came along with it so i downloaded it .
- unzip the apk file , created a directory and stored it all the files and directoies in there
+ to login you need admin otp code  an apk file came along with it. I downloaded the APK file and extracted its contents using:
+```unzip twoFactorAndroid.apk -d challenge_apk```
+
  ![[Pasted image 20250228044648.png]]
  then i installed  jadx  and set it up took alot of time since i cloned it from github and also had to compile it , afterwards i use jadx to open and decompile the files there
  ```
